@@ -1,0 +1,17 @@
+{{ block title }}
+    Результаты
+{{ endblock }}
+
+{% block content %}
+    Ваша начальная сумма {{ Constants.endowment }} ECU, <br>
+
+    Число, введённое Вами в игре {{ player.number_entered }}, <br>
+
+    Ваш финальный результат в эксперименте составил {{ player.payoff }}.  <br>
+
+    Ваш финальный результат вместе с платой за участие составил {{ participant.payoff_plus_participation_fee() }}. <br>
+
+    Благодарим Вас за участие в эксперименте!
+
+    {{ next_button }}
+{% endblock %}

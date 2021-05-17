@@ -1,0 +1,13 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{% block content %}
+    You entered the number {{ player.number_entered }}, <br>
+
+    Your endowment was {{ Constants.endowment }}, <br>
+
+    Your result is {{ player.payoff }} <br>
+
+    {{ next_button }}
+{% endblock %}

@@ -1,0 +1,41 @@
+{{ block title }}
+    Ожидания
+{{ endblock }}
+{{ block content }}
+
+<div class="alert alert-warning" role="alert">
+
+<tr>
+    <td>
+        {{ if player.artists == "Пьер Ренуap" }}
+            Вы относитесь к группе <strong> Пьера Ренура  </strong>.
+        {{ else }}
+            Вы относитесь к группе <strong> Клода Моне  </strong>.
+        {{ endif }}
+    </td>
+</tr>
+</div>
+
+
+
+<div class="alert alert-info" role="alert">
+
+<tr>
+    <td>
+       {{ if p2.artists == "Пьер Ренуap" }}
+            Участник, состоящий с Вами в паре, относится к группе <strong> Пьера Ренура  </strong>.
+       {{ else }}
+            Участник, состоящий с Вами в паре, относится к группе <strong> Клода Моне  </strong>.
+       {{ endif }}
+    </td>
+</tr>
+</div>
+
+Оцените распределение ответов среди участников эксперимента той же группы, к какой относится и находящийся в паре с Вами участник. <br>
+Если Вы угадаете, то получите дополнительный плату, прибавляющуюся к финальной выплате. <br>
+{{ formfields }} <br>
+
+
+    {{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,64 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block content %}
+    {% if player.round_number == 1 %}
+        Below you find the payoff Matrix of a prisoners Dilemma.
+        Your Payoff is written first and the payoff of the other player is written second
+        <table>
+            <tr>
+                <td rowspan="4">Other Player</td>
+                <td colspan="3"> You </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align:center">Cooperate</td>
+                <td style="text-align:center">Defect </td>
+            </tr>
+            <tr>
+                <td>Cooperate</td>
+                <td>
+                    {{ Constants.payoff_both_cooperate }} ,
+                    {{ Constants.payoff_both_cooperate }}
+                </td>
+                <td>
+                    {{ Constants.payoff_cooperate_defect_low }} ,
+                    {{ Constants.payoff_cooperate_defect_high }}
+                </td>
+            </tr>
+            <tr>
+                <td>Defect</td>
+                <td>
+                    {{ Constants.payoff_cooperate_defect_high }} ,
+                    {{ Constants.payoff_cooperate_defect_low }}
+                </td>
+                <td>
+                    {{ Constants.payoff_both_defect }} ,
+                    {{ Constants.payoff_both_defect }}
+                </td>
+            </tr>
+        </table>
+    {% else %}
+        You will not see the payoffs this round.
+        Try to remember the payoffs from the last round and then make your decision.
+    {% endif %}
+    <button type="submit" name="defect" value="True">Defect</button>
+    <button type="submit" name="defect" value="False">Cooperate</button>
+    {{ formfield_errors 'defect' }}
+{% endblock %}
+{% block app_styles %}
+<style>
+    table {
+        border: 1px solid black;
+    }
+
+    td {
+        border: 1px solid white;
+        background-color: rgb(0, 33, 71);
+        color: white;
+        font-weight: bold;
+        font-size: 19px;
+        padding: 3px 10px 3px 10px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
