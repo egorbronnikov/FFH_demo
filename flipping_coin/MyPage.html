@@ -1,0 +1,22 @@
+{{ block title }}
+    Experiment
+{{ endblock }}
+{{ block content }}
+     <p>
+        Now you are to toss a coin 6 times in a row.
+    </p>
+    <p>
+        Please, take your own coin or follow the link (open it in a new tab!) and chose any of the
+        <a href="https://www.google.com/search?q=flip+a+coin+generator&rlz=1C5CHFA_enRU671RU671&oq=fl&aqs=chrome.0.69i59j69i57j35i39j46i67i199i465j46i199i465i512j69i60l3.880j0j7&sourceid=chrome&ie=UTF-8">online tossing-coin generators</a>.
+
+    </p>
+    <p>
+        <strong>How many 'heads' did you get in a row?</strong>
+    </p>
+    {{ formfields }}
+    {{ next_button }}
+
+    {{ include Constants.instructions_template }}
+
+
+{{ endblock }}

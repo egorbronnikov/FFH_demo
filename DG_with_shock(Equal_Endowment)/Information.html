@@ -1,0 +1,12 @@
+{{ block title }}Your Decision{{ endblock }}
+{{ block content }}
+    <p>
+        This is the beginning of the game.
+        You now have {{ Constants.endowment }} of your endowment.
+    </p>
+
+    {{ next_button }}
+
+    {{ include Constants.instructions_template }}
+
+{{ endblock }}

@@ -33,10 +33,12 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     decision = models.StringField(
-        choices=[['Cooperate', 'Cooperate'], ['Defect', 'Defect']],
+        choices=[['Action1', 'Action1'], ['Action2', 'Action2']],
         doc="""This player's decision""",
         widget=widgets.RadioSelect,
     )
+
+
 
 
 # FUNCTIONS
@@ -51,11 +53,11 @@ def other_player(player: Player):
 
 def set_payoff(player: Player):
     payoff_matrix = dict(
-        Cooperate=dict(
-            Cooperate=Constants.both_cooperate_payoff, Defect=Constants.betrayed_payoff
+        Action1=dict(
+            Action1=Constants.both_cooperate_payoff, Action2=Constants.betrayed_payoff
         ),
-        Defect=dict(
-            Cooperate=Constants.betray_payoff, Defect=Constants.both_defect_payoff
+        Action2=dict(
+            Action1=Constants.betray_payoff, Action2=Constants.both_defect_payoff
         ),
     )
     player.payoff = payoff_matrix[player.decision][other_player(player).decision]

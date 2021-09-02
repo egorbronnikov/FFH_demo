@@ -1,0 +1,15 @@
+{{ block title }}Participant 1 Decision{{ endblock }}
+{{ block content }}
+    <p>
+        Due to a shock that hit the player matched with you, are <b>Participant 1</b>.
+        Please decide how much of the {{ Constants.endowment }}
+        you <b>will keep for yourself</b>.
+    </p>
+
+    {{ formfields }}
+
+    {{ next_button }}
+
+    {{ include Constants.instructions_template }}
+
+{{ endblock }}

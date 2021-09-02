@@ -1,0 +1,23 @@
+
+{{ block title }}Your Choice{{ endblock }}
+{{ block content }}
+<style>
+.button1 {background-color: #FFA500;
+          border: none;}
+.button2 {background-color: #9932CC;
+          border: none;}
+</style>
+
+
+    <div class="form-group required">
+        <tr class="highlight-row-on-hover">
+            <td><button name="decision" value="Action1" class="btn btn-primary button1" color="black">I choose Action 1</button></td>
+        </tr>
+        <tr class="highlight-row-on-hover">
+            <td><button name="decision" value="Action2" class="btn btn-primary button2">I choose Action 2</button></td>
+        </tr>
+    </div>
+
+
+{{ endblock }}
+

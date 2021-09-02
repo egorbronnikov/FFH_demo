@@ -1,7 +1,6 @@
 import numpy as np
 from otree.api import *
 
-
 author = 'Your name here'
 doc = """
 Your app description
@@ -9,7 +8,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'workshop_prisoners_dilemma_advanced_templates'
+    name_in_url = 'prisonners_dilemma_advance'
     players_per_group = 2
     num_rounds = 1
     payoff_both_cooperate = -1
@@ -37,11 +36,14 @@ class Player(BasePlayer):
 
 
 # FUNCTIONS
+
+
 # PAGES
 class MyPage(Page):
     form_model = 'player'
     # names must correspond to fields in models.py
     form_fields = ['defect']
+
 
 class ResultsWaitPage(WaitPage):
     @staticmethod
@@ -73,5 +75,9 @@ class Results(Page):
             "list_of_decisions": list_of_decisions,
         }
 
+
 # the order in which pages are displayed
-page_sequence = [MyPage, ResultsWaitPage, Results]
+page_sequence = [MyPage,
+                 ResultsWaitPage,
+                 Results
+                 ]

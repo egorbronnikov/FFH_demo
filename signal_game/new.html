@@ -1,0 +1,57 @@
+
+{{ block title }}Your Choice{{ endblock }}
+{{ block content }}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+p.big {
+  line-height: 1.8;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+function showText(id,delay){
+var elem=document.getElementById(id);
+setTimeout(function(){elem.style.visibility='visible';},delay*1000)
+}
+window.onload=function(){
+showText('delayedText1',0);
+showText('delayedText2',0.5);
+showText('delayedText3',1);
+showText('delayedText4',1.5);
+showText('delayedText5',2);
+showText('delayedText6',2.5);
+showText('delayedText7',3);
+showText('delayedText8',3.5);
+showText('delayedText9',4);
+}
+</script>
+</head>
+<body>
+
+<p class="big">
+<div id="delayedText1" class="btn btn-warning" style="visibility:hidden">After 0 seconds: news=<b>{{signal}}</b>,
+    choice1= <b>{{ my_decision }}</b>, choice2= <b>{{ opponent_decision }}</b>,
+    X={{random_number_X}}, Y={{random_number_Y}} .</div>
+</p>
+
+</body>
+</html>
+
+
+    {{ if my_decision == 'Action1' and opponent_decision == 'Action1' }}
+
+    [There is a high chance for GOOD signal.]
+
+    {{ else }}
+
+    [There is a high chance for BAD signal.]
+
+    {{ endif }}
+
+{{ endblock }}

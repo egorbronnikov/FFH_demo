@@ -1,0 +1,55 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+    <div class="alert alert-info" role="alert">
+            <p> That was round <b>No. {{ player.round_number }}</b> </p>
+    </div>
+
+
+    {{ if player.id_in_group == 1 }}
+
+
+        <p>
+            In this round, you chose to send participant B {{ group.sent_amount }}.
+            Participant B returned {{ group.sent_back_amount }}.
+        </p>
+        <p>
+            In this round, you were initially endowed with {{ Constants.endowment }},
+            chose to send {{ group.sent_amount }},
+            received {{ group.sent_back_amount }}
+            thus you now have:
+            {{ Constants.endowment }}-{{ group.sent_amount }}+{{ group.sent_back_amount }}=<b>{{ player.payoff }}</b>
+        </p>
+        <p>
+            Cumulatively, for all rounds played, you have earned <b>{{ player.cum_payoff }}</b>.
+        </p>
+
+
+        <p>{{ next_button }}</p>
+
+
+    {{ else }}
+        <p>
+            In this round, participant A sent you {{ group.sent_amount }}.
+            They were tripled so you received {{ tripled_amount }}.
+            You chose to return {{ group.sent_back_amount }}.
+        </p>
+        <p>
+            In this round, you received {{ tripled_amount }},
+            chose to return {{ group.sent_back_amount }}
+            thus you now have:
+            ({{ tripled_amount }})-({{ group.sent_back_amount }})=<b>{{ player.payoff }}</b>.
+        </p>
+        <p>
+            Cumulatively, for all rounds played, you have earned <b>{{ player.cum_payoff }}</b>.
+        </p>
+
+
+        <p>{{ next_button }}</p>
+
+    {{ endif }}
+
+
+{{ endblock }}
+
+
+
