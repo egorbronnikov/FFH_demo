@@ -16,7 +16,7 @@ Baseline (No Info) Treatment
 =========================================================================================================
 (Conrads et al., 2013)'s Team Compensation treatment.
 
-Link for the game:
+
 
 
 Monet-to-Monet &amp; Monet-to-Renoir Treatment
@@ -25,5 +25,4 @@ Monet-to-Monet Treatment: the matched player i and player j are from the same gr
 
 Monet-to-Renoir Treatment:  player i is from Monet group while player j is from Renoir group (or vice versa).
 
-Link for the game:
 
