@@ -1,0 +1,91 @@
+
+<div class="card bg-light m-3">
+<div class="card-body">
+
+
+    <p>
+        По окончании эксперимента Вы получите плату как за сам факт участия,
+        так и плату, зависящую от результатов самой игры.
+
+        Плата за участие одинакова для всех, в то время как
+        плата, полученная в ходе игры, разнится.
+    </p>
+
+    <p>
+        Ваш финальный результат зависит от Ваших собственных действий в игре
+        (т.е. индивидуальный результат) и действий в игре участника,
+        который будет определён к Вам в пару.
+    </p>
+
+
+    <p>
+        В начале игры каждый игрок получает {{ Constants.endowment }} ECU
+        (Experimental Currency Unit - Экспериментальных денежных единиц).
+
+        Ваш индивидуальный результат зависит только от Вас и определяется
+        Вашими собственными действиями:
+        Вам необходимо подбросить игральную кость (с шестью гранями)
+        и ввести выпавшее число на грани в окошко формы.<br>
+    </p>
+    <p>
+        При этом, если Вам выпадет число от 1 до 5,
+        то Ваша начальная сумма умножается на выпавшее число.
+        Если же Вам выпало 6, то начальная сумма умножается на 0 (См. таблицу ниже). <br>
+    </p>
+
+    <p>
+        Ваш финальный результат определяется следующим образом:
+        Ваш индивидуальные результат в игре сумируется с результатом в игре участника,
+        находящегося с Вами в паре, и делится поровну между каждым из Вас.
+    </p>
+
+    <p>
+        В конце игры все заработанные Вами деньги в ECU,
+        будут конвертированы в рубли по курсе 1 ECU = ___ рублей. <br>
+    </p>
+    <p>
+        Зависимость Вашего индивидуального результата в игре резюмирована в таблице:
+    </p>
+
+    <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-dvpl">Выпавшее число</th>
+    <th class="tg-c3ow">1</th>
+    <th class="tg-c3ow">2</th>
+    <th class="tg-c3ow">3</th>
+    <th class="tg-baqh">4</th>
+    <th class="tg-baqh">5</th>
+    <th class="tg-baqh">6</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-dvpl">Ваш результат</td>
+    <td class="tg-c3ow">100</td>
+    <td class="tg-c3ow">200</td>
+    <td class="tg-c3ow">300</td>
+    <td class="tg-baqh">400</td>
+    <td class="tg-baqh">500</td>
+    <td class="tg-baqh">&nbsp;&nbsp;0&nbsp;&nbsp;</td>
+  </tr>
+</tbody>
+</table>
+
+    {{ block content }}
+    {{ next_button }}
+    {{ endblock }}
+
+    
+</div>
+</div>
