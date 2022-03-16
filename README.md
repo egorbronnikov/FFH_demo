@@ -14,19 +14,10 @@ Firstly, subjects will be asked for the two artists preferences and hence formed
 
 
 
-
-
-
-
-Treatments
+Draft Paper
 =========================================================================================================
 
-Baseline (No-Info): Conrads et al. (2013)'s Team Compensation treatment (as described above).
-
-Treatment 1: the matched player i and player j are from the same group (it can be either Monet-to-Monet or Renoir-to-Renoir)
-
-Treatment 2: player i is from Monet group while player j is from Renoir group (or vice versa).
-
+Draft paper can be found [here](https://drive.google.com/file/d/1FZk5t8cwlTnJoJskMW-tcB7NFuHSqQ67/view?usp=sharing).
 
 
 
